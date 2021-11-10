@@ -34,7 +34,7 @@
     <select id="user" name="user_id">
       {% for user in all_users %}
         <option value="{{ user.id }}"
-          {% if task.user.id== user.id %} selected="selected"{% endif %}>
+          {% if task.user.id == user.id %} selected="selected"{% endif %}>
           {{ user.first_name }}
         </option>
       {% endfor %}

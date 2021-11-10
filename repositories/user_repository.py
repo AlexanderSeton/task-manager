@@ -32,12 +32,12 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        user = User(result['first_name'], result['last_name'], result['id'] )
+        user = User(result['first_name'], result['last_name'], result['id'])
     return user
 
 
 def delete_all():
-    sql = "DELETE  FROM users"
+    sql = "DELETE FROM users"
     run_sql(sql)
 
 
@@ -51,6 +51,7 @@ def update(user):
     sql = "UPDATE users SET (first_name, last_name) = (%s, %s) WHERE id = %s"
     values = [user.first_name, user.last_name, user.id]
     run_sql(sql, values)
+
 
 def tasks(user):
     tasks = []

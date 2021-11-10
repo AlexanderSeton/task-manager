@@ -8,7 +8,7 @@ from models.task import Task
 # Tasks Blueprint
 tasks_blueprint = Blueprint("tasks", __name__)
 
-
+# INDEX
 @tasks_blueprint.route("/tasks", methods=["GET"])
 def tasks():
     all_tasks = task_repository.select_all()
